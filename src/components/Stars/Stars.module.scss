@@ -1,0 +1,51 @@
+.rotate {
+  pointer-events: none;
+  transform-origin: center;
+}
+.rotateInterior {
+  pointer-events: none;
+  transform-origin: center;
+  position: fixed;
+}
+@media only screen and (max-width: 672px) {
+  .rotate {
+    animation: rotate 360s linear infinite;
+    margin-top: -20em;
+    margin-left: -40%;
+    width: 200%;
+  }
+  .rotateInterior {
+    animation: rotate 400s linear infinite;
+    margin-left: -32%;
+    width: 180%;
+  }
+}
+@media only screen and (min-width: 673px) {
+  .rotate {
+    animation: rotate 460s linear infinite;
+    margin-top: -20em;
+    margin-left: -16em;
+  }
+  .rotateInterior {
+    animation: rotate 460s linear infinite;
+    margin-left: 10%;
+    width: 80%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateInterior {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

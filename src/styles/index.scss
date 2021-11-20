@@ -1,0 +1,119 @@
+// Breakpoints: 672px, 1056px
+
+// disable horizontal scroll
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+// google calendar responsive iframe embed
+.calendar-timezone {
+  margin-top: -1em;
+  margin-bottom: 0.5em;
+}
+@media only screen and (max-width: 550px) {
+  .big-container {
+    display: none;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .small-container {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1056px) {
+  .calendar-timezone,
+  .responsive-iframe-container iframe,
+  .vresponsive-iframe-container object,
+  .vresponsive-iframe-container embed {
+    padding-left: 16em;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1055px) {
+  .responsive-iframe-container iframe,
+  .vresponsive-iframe-container object,
+  .vresponsive-iframe-container embed {
+    left: 0;
+    width: 100%;
+  }
+}
+.responsive-iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0.55;
+  filter: grayscale(100%) invert(100%) brightness(500%) contrast(75%);
+}
+.responsive-iframe-container iframe,
+.vresponsive-iframe-container object,
+.vresponsive-iframe-container embed {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+// hide page last updated date text
+.last-modified-date-module--text--1RmBx {
+  display: none;
+}
+// change nav current selection color to match subscribe embed
+a.bx--side-nav__link[aria-current='page']::before,
+a.bx--side-nav__link--current::before {
+  background-color: #019b50 !important;
+}
+
+// hide footer
+.Footer-module--footer--3oOoC {
+  display: none !important;
+}
+
+// hide edit link module
+.EditLink-module--row--2vJiZ {
+  display: none !important;
+}
+
+// Adjust gray resource card to match with right third of green lines image
+@media only screen and (min-width: 672px) {
+  .bx--resource-card {
+    margin-left: -0.41em;
+  }
+}
+@media only screen and (min-width: 1056px) {
+  .bx--resource-card {
+    margin-left: -0.6em;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .bx--resource-card {
+    margin-left: -0.55em;
+  }
+}
+
+// hide top right app button
+.Header-module--switcher-button--1IMCF {
+  display: none !important;
+}
+
+// hide feedback smiley face modal button
+.LaunchButton-module--button--30iL7 {
+  display: none !important;
+}
+
+// hide first nav highlighting on selection
+// li.LeftNav-module--current-item--gs-Rt.bx--side-nav__items:first-child a {
+//   background-color: #161616 !important;
+// }
+// li.bx--side-nav__item:first-child a.LeftNav-module--current-item--gs-Rt {
+//   display: none !important;
+// }
+// .li.bx--side-nav__item:first-child a:focus{
+//   display: none;
+// }
+// a.bx--side-nav__link[aria-current='page']::before:first-child,
+// a.bx--side-nav__link--current::before:first-child {
+//   display: none !important;
+// }

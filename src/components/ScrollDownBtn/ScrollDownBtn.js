@@ -1,7 +1,7 @@
-import React from 'react';
-import { UpToTop20 } from '@carbon/icons-react';
-import { button } from './ScrollDownBtn.module.scss';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import React from "react";
+import { UpToTop20 } from "@carbon/icons-react";
+import { button } from "./ScrollDownBtn.module.scss";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const ScrollDownBtn = () => (
   <AnchorLink href="#the-band">

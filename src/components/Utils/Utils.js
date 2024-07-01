@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useWindowScroll } from 'beautiful-react-hooks';
-import cx from 'classnames';
-import ScrollDownBtn from '../ScrollDownBtn';
-import * as styles from './Utils.module.scss';
+import React, { useState } from "react";
+import { useWindowScroll } from "beautiful-react-hooks";
+import cx from "classnames";
+import ScrollDownBtn from "../ScrollDownBtn";
+import * as styles from "./Utils.module.scss";
 
 const Utils = () => {
   const [hidden, setHidden] = useState(false);
@@ -20,7 +20,8 @@ const Utils = () => {
   return (
     <div
       aria-label="This section contains utilities"
-      className={cx(styles.container, { [styles.hidden]: hidden })}>
+      className={cx(styles.container, { [styles.hidden]: hidden })}
+    >
       <ScrollDownBtn />
     </div>
   );

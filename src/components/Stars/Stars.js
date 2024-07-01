@@ -1,10 +1,10 @@
-import React from 'react';
-import { rotate, rotateInterior } from './Stars.module.scss';
+import React from "react";
+import { rotate, rotateInterior } from "./Stars.module.scss";
 
 const Stars = ({ isHome }) => (
   <>
     <div>
-      <div className={isHome === true ? rotate : rotateInterior }>
+      <div className={isHome === true ? rotate : rotateInterior}>
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"

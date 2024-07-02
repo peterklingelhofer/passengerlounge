@@ -32,7 +32,6 @@ const Calendar = () => (
         scrolling="no"
         title="calendar-desktop"
       ></iframe>
-      <div className="mask"></div>
     </div>
     <div className="responsive-iframe-container small-container">
       <iframe
@@ -44,7 +43,6 @@ const Calendar = () => (
         scrolling="no"
         title="calendar-mobile"
       ></iframe>
-      <div className="mask"></div>
     </div>
   </>
 );

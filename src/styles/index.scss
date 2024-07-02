@@ -14,17 +14,6 @@ body {
   height: 100%;
 }
 
-.mask {
-  position: absolute;
-  bottom: 0;
-  right: 8px;
-  width: 160px; /* Adjust width as needed */
-  height: 28px; /* Adjust height as needed */
-  background-color: rgb(73, 73, 73);
-  pointer-events: none; /* Ensure it doesn't block interaction with the iframe */
-  filter: grayscale(100%) invert(100%) brightness(1000%) contrast(82.5%);
-}
-
 .calendar-timezone {
   margin-top: -1em;
   margin-bottom: 0.5em;
@@ -63,7 +52,7 @@ body {
   height: 0;
   overflow: hidden;
   opacity: 0.55;
-  filter: grayscale(100%) invert(100%) brightness(500%) contrast(100%);
+  filter: grayscale(100%) invert(100%) brightness(600%) contrast(100%);
 }
 .responsive-iframe-container iframe,
 .vresponsive-iframe-container object,

@@ -7,60 +7,60 @@ body {
   overflow-x: hidden;
 }
 
-// google calendar responsive iframe embed
-.responsive-iframe-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+// // google calendar responsive iframe embed
+// .responsive-iframe-container {
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+// }
 
-.calendar-timezone {
-  margin-top: -1em;
-  margin-bottom: 0.5em;
-}
-@media only screen and (max-width: 550px) {
-  .big-container {
-    display: none;
-  }
-}
-@media only screen and (min-width: 550px) {
-  .small-container {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1056px) {
-  .calendar-timezone,
-  .responsive-iframe-container iframe,
-  .vresponsive-iframe-container object,
-  .vresponsive-iframe-container embed {
-    padding-left: 16em;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 1055px) {
-  .responsive-iframe-container iframe,
-  .vresponsive-iframe-container object,
-  .vresponsive-iframe-container embed {
-    left: 0;
-    width: 100%;
-  }
-}
-.responsive-iframe-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-  opacity: 0.55;
-  filter: grayscale(100%) invert(100%) brightness(600%) contrast(100%);
-}
-.responsive-iframe-container iframe,
-.vresponsive-iframe-container object,
-.vresponsive-iframe-container embed {
-  position: absolute;
-  top: 0;
-  height: 100%;
-}
+// .calendar-timezone {
+//   margin-top: -1em;
+//   margin-bottom: 0.5em;
+// }
+// @media only screen and (max-width: 550px) {
+//   .big-container {
+//     display: none;
+//   }
+// }
+// @media only screen and (min-width: 550px) {
+//   .small-container {
+//     display: none;
+//   }
+// }
+// @media only screen and (min-width: 1056px) {
+//   .calendar-timezone,
+//   .responsive-iframe-container iframe,
+//   .vresponsive-iframe-container object,
+//   .vresponsive-iframe-container embed {
+//     padding-left: 16em;
+//     width: 100%;
+//   }
+// }
+// @media only screen and (max-width: 1055px) {
+//   .responsive-iframe-container iframe,
+//   .vresponsive-iframe-container object,
+//   .vresponsive-iframe-container embed {
+//     left: 0;
+//     width: 100%;
+//   }
+// }
+// .responsive-iframe-container {
+//   position: relative;
+//   padding-bottom: 56.25%;
+//   padding-top: 30px;
+//   height: 0;
+//   overflow: hidden;
+//   opacity: 0.55;
+//   filter: grayscale(100%) invert(100%) brightness(600%) contrast(100%);
+// }
+// .responsive-iframe-container iframe,
+// .vresponsive-iframe-container object,
+// .vresponsive-iframe-container embed {
+//   position: absolute;
+//   top: 0;
+//   height: 100%;
+// }
 
 // hide page last updated date text
 .last-modified-date-module--text--1RmBx {

@@ -8,7 +8,7 @@ import Switcher from "gatsby-theme-carbon/src/components/Switcher";
 import Footer from "gatsby-theme-carbon/src/components/Footer";
 import Container from "gatsby-theme-carbon/src/components/Container";
 import Stars from "../../components/Stars";
-import Calendar from "../../components/Calendar";
+// import Calendar from "../../components/Calendar";
 import "gatsby-theme-carbon/src/styles/index.scss";
 import { layout } from "../../styles/Layout.module.scss";
 
@@ -23,17 +23,17 @@ const Layout = ({
   tabs,
 }) => {
   const is404 = children.key === null;
-  let childrenWithCalendar;
-  if (pageTitle === "Upcoming Shows") {
-    const yourArray = [...children];
-    const arrayFirstHalf = yourArray.slice(0, 2);
-    const arraySecondHalf = yourArray.slice(3, yourArray.length);
-    childrenWithCalendar = [
-      ...arrayFirstHalf,
-      <Calendar key={"calendar"} />,
-      ...arraySecondHalf,
-    ];
-  }
+  // let childrenWithCalendar;
+  // if (pageTitle === "Upcoming Shows") {
+  //   const yourArray = [...children];
+  //   const arrayFirstHalf = yourArray.slice(0, 2);
+  //   const arraySecondHalf = yourArray.slice(3, yourArray.length);
+  //   childrenWithCalendar = [
+  //     ...arrayFirstHalf,
+  //     <Calendar key={"calendar"} />,
+  //     ...arraySecondHalf,
+  //   ];
+  // }
 
   useLayoutEffect(() => {
     const scroll = require("smooth-scroll")('a[href*="#"]', {
@@ -60,7 +60,8 @@ const Layout = ({
       <LeftNav homepage={homepage} is404Page={is404} theme={theme} />
       <Container homepage={homepage} theme={theme}>
         {pageTitle !== "" && <Stars isHome={false} />}
-        {pageTitle !== "Upcoming Shows" ? children : childrenWithCalendar}
+        {children}
+        {/* pageTitle !== "Upcoming Shows" ? children : childrenWithCalendar */}
         <Footer />
       </Container>
     </div>

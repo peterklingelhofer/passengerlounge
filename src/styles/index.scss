@@ -9,16 +9,12 @@ body {
 
 html {
   &.light-mode {
-    filter: invert(1);
+    filter: invert(1) hue-rotate(180deg);
 
     .gatsby-resp-image-image,
     img[alt="viscous album cover"] {
-      filter: invert(1);
+      filter: invert(1) hue-rotate(180deg);
     }
-  }
-
-  &.dark-mode {
-    filter: none;
   }
 }
 

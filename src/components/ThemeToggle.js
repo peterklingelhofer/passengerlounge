@@ -19,12 +19,12 @@ const ThemeToggle = () => {
   };
 
   return (
-    <div style={{ position: "fixed", top: 12, right: 50 }}>
+    <div style={{ position: "fixed", top: 13, right: 50 }}>
       <DarkModeSwitch
         checked={isDarkMode}
         onChange={toggleDarkMode}
         size={20}
-        sunColor="gray"
+        sunColor="white"
       />
     </div>
   );

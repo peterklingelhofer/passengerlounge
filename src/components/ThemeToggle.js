@@ -10,20 +10,8 @@ const ThemeToggle = () => {
     return localTheme === "dark";
   });
 
-  const [togglePosition, setTogglePosition] = useState(0);
-
-  const updateTogglePosition = () => {
-    const viewportWidth = window.innerWidth;
-    setTogglePosition(viewportWidth - THEME_TOGGLE_SIZE - 50);
-  };
-
   useEffect(() => {
     initializeDarkMode();
-    updateTogglePosition();
-    window.addEventListener("resize", updateTogglePosition);
-    return () => {
-      window.removeEventListener("resize", updateTogglePosition);
-    };
   }, []);
 
   const toggleDarkMode = (checked) => {
@@ -33,7 +21,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <div style={{ position: "absolute", top: 12, left: `${togglePosition}px` }}>
+    <div style={{ position: "fixed", top: 12, right: 50 }}>
       <DarkModeSwitch
         checked={isDarkMode}
         onChange={toggleDarkMode}

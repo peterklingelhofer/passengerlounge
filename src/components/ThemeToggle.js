@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import setDarkMode, { initializeDarkMode } from "../utils/setDarkMode";
 
-export const THEME_TOGGLE_SIZE = 20;
-
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const localTheme = localStorage.getItem("theme");
@@ -25,7 +23,7 @@ const ThemeToggle = () => {
       <DarkModeSwitch
         checked={isDarkMode}
         onChange={toggleDarkMode}
-        size={THEME_TOGGLE_SIZE}
+        size={20}
         sunColor="gray"
       />
     </div>

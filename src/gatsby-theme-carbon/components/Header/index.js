@@ -1,9 +1,13 @@
 import React from "react";
 import Header from "gatsby-theme-carbon/src/components/Header";
+import ThemeToggle from "../../../components/ThemeToggle"; // Adjust the path as necessary
 
 const CustomHeader = (props) => (
   <Header {...props}>
-    <strong>Passenger&nbsp;Lounge</strong>
+    <div>
+      <strong>Passenger&nbsp;Lounge</strong>
+      <ThemeToggle />
+    </div>
   </Header>
 );
 

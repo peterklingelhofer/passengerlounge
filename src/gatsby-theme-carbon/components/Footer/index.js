@@ -1,41 +1,27 @@
+// src/gatsby-theme-carbon/components/Footer/index.js
 import React from "react";
 import Footer from "gatsby-theme-carbon/src/components/Footer";
+import { links as resourceLinks } from "../LeftNav/ResourceLinks";
 
 const Content = ({ buildTime }) => (
   <>
-    <p>
-      The <code>Content</code> component receives a <code>buildTime</code> prop
-      that to display your site's build time: {buildTime}
-    </p>
-    <p>
-      By importing the <strong>Footer</strong> component from
-      gatsby-theme-carbon, we can supply our own props.
-    </p>
-    <p>
-      The default export from a shadowed component will replace that component
-      in the theme.
-    </p>
-    <p>
-      <a href="https://www.gatsbyjs.org/docs/themes/api-reference/#component-shadowing">
-        More about component shadowing
-      </a>
-    </p>
+    <p>Site build time: {buildTime}</p>
   </>
 );
 
-const links = {
-  firstCol: [
-    { href: "https://ibm.com/design", linkText: "Shadowed link" },
-    { href: "https://ibm.com/design", linkText: "Shadowed link" },
-    { href: "https://ibm.com/design", linkText: "Shadowed link" },
-  ],
-  secondCol: [
-    { href: "https://ibm.com/design", linkText: "Shadowed link" },
-    { href: "https://ibm.com/design", linkText: "Shadowed link" },
-    { href: "https://ibm.com/design", linkText: "Shadowed link" },
-    { href: "https://ibm.com/design", linkText: "Shadowed link" },
-  ],
+const distributeLinks = (links) => {
+  const midIndex = Math.ceil(links.length / 2);
+  return {
+    firstCol: links
+      .slice(0, midIndex)
+      .map((link) => ({ href: link.href, linkText: link.title })),
+    secondCol: links
+      .slice(midIndex)
+      .map((link) => ({ href: link.href, linkText: link.title })),
+  };
 };
+
+const links = distributeLinks(resourceLinks);
 
 const CustomFooter = () => <Footer links={links} Content={Content} />;
 

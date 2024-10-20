@@ -2,12 +2,12 @@
 import React, { useLayoutEffect } from "react";
 
 import LeftNav from "gatsby-theme-carbon/src/components/LeftNav";
-import Meta from "gatsby-theme-carbon/src/components/Meta";
 import Header from "gatsby-theme-carbon/src/components/Header";
 import Switcher from "gatsby-theme-carbon/src/components/Switcher";
 import Footer from "gatsby-theme-carbon/src/components/Footer";
 import Container from "gatsby-theme-carbon/src/components/Container";
 import Stars from "../../components/Stars";
+import Meta from "../../gatsby-theme-carbon/components/Meta/Meta.js";
 // import Calendar from "../../components/Calendar";
 import "gatsby-theme-carbon/src/styles/index.scss";
 import { layout } from "../../styles/Layout.module.scss";

@@ -31,6 +31,10 @@ export const links = [
     title: "Twitter",
     href: "https://twitter.com/passengerlounge",
   },
+  {
+    title: "Newsletter",
+    href: "https://ba1b46a4.sibforms.com/serve/MUIFACQdYp9g2xRzLr2AgJ8f0wVdkSJIvGmt7xD7i4gYxrce0ym1F1bBGOfgP__5JZzkQvYGAwXkW0SX5ZLdYdsr3nzGfC6VSDUR5ke0KKteerFPZK6J74sS_vko-h9YFisAhNPDSC-h2ovUsVDdzhi6w9vG4UhwAaU4YZJAz9FCkn-B500wuFTfMCH6Ze-u40vuWvvpVhsFVo0L",
+  },
 ];
 
 const CustomResources = () => (

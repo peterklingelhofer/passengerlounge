@@ -101,7 +101,7 @@ const BrevoForm = () => {
               font-size: 16px;
               font-weight: 700;
               color: #FFFFFF;
-              background-color: #3E4857;
+              background-color: rgb(63, 153, 88); /* Updated button color */
               border-radius: 3px;
               border: none;
               padding: 10px 20px;
@@ -110,6 +110,12 @@ const BrevoForm = () => {
               display: flex;
               align-items: center;
               justify-content: center;
+              transition: background-color 0.3s ease; /* Smooth transition */
+            }
+
+            /* Hover effect for the button */
+            .sib-form-block__button:hover {
+              background-color: rgb(75, 173, 98); /* Lightened color on hover */
             }
 
             /* Error Message Styling */
@@ -243,29 +249,29 @@ const BrevoForm = () => {
               }}
             >
               {/* Form Title */}
-              <div style={{ padding: "8px 0" }}>
+              {/* <div style={{ padding: "8px 0" }}>
                 <div
                   className="sib-form-block"
                   style={{
                     fontSize: "32px",
                     textAlign: "left",
                     fontWeight: "700",
-                    color: "#FFFFFF", // Set title text to white
+                    color: "#FFFFFF",
                     backgroundColor: "transparent",
                   }}
                 >
                   <p>Newsletter</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Form Description */}
-              <div style={{ padding: "8px 0" }}>
+              {/* <div style={{ padding: "8px 0" }}>
                 <div
                   className="sib-form-block"
                   style={{
                     fontSize: "16px",
                     textAlign: "left",
-                    color: "#FFFFFF", // Set description text to white
+                    color: "#FFFFFF",
                     backgroundColor: "transparent",
                   }}
                 >
@@ -275,7 +281,7 @@ const BrevoForm = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Email Input */}
               <div style={{ padding: "8px 0", width: "100%" }}>
@@ -365,7 +371,6 @@ const BrevoForm = () => {
                       fontSize: "16px",
                       fontWeight: "700",
                       color: "#FFFFFF",
-                      backgroundColor: "#3E4857",
                       borderRadius: "3px",
                       border: "none",
                       padding: "10px 20px",
@@ -385,7 +390,7 @@ const BrevoForm = () => {
                     >
                       <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                     </svg>
-                    SUBSCRIBE
+                    Subscribe
                   </button>
                 </div>
               </div>

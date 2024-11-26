@@ -27,7 +27,6 @@ const BrevoForm = () => {
   return (
     <>
       <Helmet>
-        {/* Inject Brevo Form Styles and IBM Plex Sans VF Font */}
         <style>
           {`
             #sib-container, 
@@ -131,6 +130,9 @@ const BrevoForm = () => {
               .sib-form-block__button {
                 width: 100% !important;
               }
+            }
+            .grecaptcha-badge {
+              visibility: hidden;
             }
           `}
         </style>

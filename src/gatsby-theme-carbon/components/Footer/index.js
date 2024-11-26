@@ -2,10 +2,13 @@
 import React from "react";
 import Footer from "gatsby-theme-carbon/src/components/Footer";
 import { links as resourceLinks } from "../LeftNav/ResourceLinks";
+import BrevoForm from "../../../components/BrevoForm/BrevoForm";
 
 const Content = ({ buildTime }) => (
   <>
-    <p>Site build time: {buildTime}</p>
+    <div style={{ marginBottom: "-40px" }} />
+    <BrevoForm />
+    {/* <p>Site build time: {buildTime}</p> */}
   </>
 );
 

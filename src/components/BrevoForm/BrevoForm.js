@@ -30,17 +30,6 @@ const BrevoForm = () => {
         {/* Inject Brevo Form Styles and IBM Plex Sans VF Font */}
         <style>
           {`
-            /* Import IBM Plex Sans VF */
-            @font-face {
-              font-family: "IBM Plex Sans VF";
-              src: url("https://your-font-host.com/fonts/IBMPlexSansVF.woff2") format("woff2"),
-                   url("https://your-font-host.com/fonts/IBMPlexSansVF.woff") format("woff");
-              font-weight: 100 900; /* Adjust based on your font's available weights */
-              font-style: normal;
-              font-display: swap;
-            }
-
-            /* Apply the desired font family globally within the form */
             #sib-container, 
             .sib-form, 
             .sib-container--large,
@@ -52,7 +41,7 @@ const BrevoForm = () => {
             .sib-form-message-panel__inner-text,
             .sib-form-block__button {
               font-family: "IBM Plex Sans VF", "Helvetica Neue", Arial, sans-serif !important;
-              color: #ffffff !important; /* Set all text to white */
+              color: #ffffff !important;
             }
 
             /* Placeholder styling */
@@ -62,7 +51,6 @@ const BrevoForm = () => {
               text-align: left;
               font-family: "IBM Plex Sans VF", "Helvetica Neue", Arial, sans-serif;
               color: #c0ccda;
-              /* Note: Placeholder background cannot be set; background is set on input */
             }
 
             /* Link styling */
@@ -75,17 +63,18 @@ const BrevoForm = () => {
             /* Form container styling */
             .sib-form {
               text-align: center;
-              background-color: #161616;
-              padding: 20px;
+              background-color: transparent;
+              padding: 20px 20px;
               border-radius: 8px;
+              transition: padding 0.3s ease;
             }
 
             .sib-container--large {
-              background-color: rgb(22, 22, 22) !important; /* Darker background */
-              color: #ffffff !important; /* White text */
-              padding: 20px;
+              background-color: transparent !important;
+              color: #ffffff !important;
+              padding: 10px 20px;
               border-radius: 8px;
-              border: none; /* Remove border for cleaner look */
+              border: none;
             }
 
             /* Input field styling */
@@ -101,7 +90,7 @@ const BrevoForm = () => {
               font-size: 16px;
               font-weight: 700;
               color: #FFFFFF;
-              background-color: rgb(63, 153, 88); /* Updated button color */
+              background-color: rgb(63, 153, 88);
               border-radius: 3px;
               border: none;
               padding: 10px 20px;
@@ -110,12 +99,12 @@ const BrevoForm = () => {
               display: flex;
               align-items: center;
               justify-content: center;
-              transition: background-color 0.3s ease; /* Smooth transition */
+              transition: background-color 0.3s ease;
             }
 
             /* Hover effect for the button */
             .sib-form-block__button:hover {
-              background-color: rgb(75, 173, 98); /* Lightened color on hover */
+              background-color: rgb(53, 143, 78);
             }
 
             /* Error Message Styling */
@@ -157,8 +146,6 @@ const BrevoForm = () => {
         className="sib-form"
         style={{
           textAlign: "center",
-          backgroundColor: "#161616",
-          padding: "20px",
           borderRadius: "8px",
         }}
       >
@@ -229,10 +216,9 @@ const BrevoForm = () => {
             className="sib-container--large sib-container--vertical"
             style={{
               textAlign: "center",
-              backgroundColor: "rgb(22, 22, 22)", // Updated to match dark mode
               maxWidth: "540px",
               borderRadius: "3px",
-              border: "none", // Removed border for cleaner look
+              border: "none",
               direction: "ltr",
               margin: "0 auto",
             }}
@@ -323,8 +309,8 @@ const BrevoForm = () => {
                             width: "100%",
                             borderRadius: "4px",
                             border: "1px solid #C0CCD9",
-                            backgroundColor: "rgb(22, 22, 22)", // Set input background
-                            color: "#FFFFFF", // Set input text to white
+                            backgroundColor: "rgb(22, 22, 22)",
+                            color: "#FFFFFF",
                           }}
                         />
                       </div>

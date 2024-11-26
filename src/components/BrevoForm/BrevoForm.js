@@ -132,6 +132,7 @@ const BrevoForm = () => {
               }
             }
             .grecaptcha-badge {
+              filter: invert(1);
               visibility: hidden;
             }
           `}

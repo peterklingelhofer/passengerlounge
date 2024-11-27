@@ -33,7 +33,7 @@ export const links = [
   },
   {
     title: "Newsletter",
-    href: "https://ba1b46a4.sibforms.com/serve/MUIFACQdYp9g2xRzLr2AgJ8f0wVdkSJIvGmt7xD7i4gYxrce0ym1F1bBGOfgP__5JZzkQvYGAwXkW0SX5ZLdYdsr3nzGfC6VSDUR5ke0KKteerFPZK6J74sS_vko-h9YFisAhNPDSC-h2ovUsVDdzhi6w9vG4UhwAaU4YZJAz9FCkn-B500wuFTfMCH6Ze-u40vuWvvpVhsFVo0L",
+    href: "https://ba1b46a4.sibforms.com/serve/MUIFAHOpQ-RpMcSNf0V0K9gOBY9mcv6F12PhIru3I5zrx51CQDa04NL43tPPE00e40Vp4A2Pi3m3dxwMY_mwHW9pd8XaMWhohhTFgF3QKsKfukDxtd9Hc6QMYJDd8zRufyquwXynNOjXFzt2_ABMcq_eVEE2w_e94anHpW_LmHFEcXxPxMQAq3x3BmATohuRrxzFDvI7XqUgPgXE",
   },
 ];
 

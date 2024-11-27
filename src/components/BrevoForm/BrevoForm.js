@@ -268,7 +268,7 @@ const BrevoForm = () => {
             <form
               id="sib-form"
               method="POST"
-              action="https://ba1b46a4.sibforms.com/serve/MUIFAHOpQ-RpMcSNf0V0K9gOBY9mcv6F12PhIru3I5zrx51CQDa04NL43tPPE00e40Vp4A2Pi3m3dxwMY_mwHW9pd8XaMWhohhTFgF3QKsKfukDxtd9Hc6QMYJDd8zRufyquwXynNOjXFzt2_ABMcq_eVEE2w_e94anHpW_LmHFEcXxPxMQAq3x3BmATohuRrxzFDvI7XqUgPgXE"
+              action="https://ba1b46a4.sibforms.com/serve/MUIFAEU9npVwRv42Mqf-n4sgtNmbLn6MDH9hT5I5FXm5ZJidV0swp_WIF1iRyl0eVOI4k2xvy1NyNo9F1W889rm0cT1_rgW9GzqG5BKPCqmHz-Lwx2S71e9AEH3einDAvjwvPI6vJn_bOlx2P2YBa9BLOebsU4tQIPDDgtKMu9y2ZhRHHPqfpV-L1d8V-ccArrJVdmHUbo9E4p2V"
               data-type="subscription"
               style={{
                 display: "flex",

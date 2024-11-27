@@ -210,11 +210,10 @@ const BrevoForm = ({ isWide = true }) => {
             /* Add extra padding at the bottom for mobile to prevent keyboard overlap */
             @media (max-width: 600px) {
               body {
-                padding-bottom: 300px; /* Adjust based on keyboard height */
+                padding-bottom: 2em;
               }
             }
 
-            /* Optional: Smooth scrolling behavior */
             html {
               scroll-behavior: smooth;
             }

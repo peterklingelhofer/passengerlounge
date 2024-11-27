@@ -28,6 +28,10 @@ export const links = [
     href: "https://www.tiktok.com/@passengerlounge",
   },
   {
+    title: "Bluesky",
+    href: "https://bsky.app/profile/passengerlounge.com",
+  },
+  {
     title: "Twitter",
     href: "https://twitter.com/passengerlounge",
   },

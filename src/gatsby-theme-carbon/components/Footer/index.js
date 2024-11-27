@@ -10,10 +10,10 @@ import {
 } from "./Footer.module.scss";
 import { Row, Grid, Column } from "gatsby-theme-carbon/src/components/Grid";
 import { links as resourceLinks } from "../LeftNav/ResourceLinks";
-import BrevoForm from "../../../components/BrevoForm/BrevoForm";
+import { BrevoForm } from "../../../components/BrevoForm/BrevoForm";
 import PropTypes from "prop-types";
 
-const Footer = ({ Content, links, Logo }) => {
+const Footer = ({ Content, links }) => {
   const { firstCol, secondCol } = links;
 
   return (

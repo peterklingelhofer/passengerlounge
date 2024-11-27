@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 
-const BrevoForm = ({ isWide = true }) => {
-  // Create refs for the input and button
+export const SUBSCRIBE_FORM_ACTION =
+  "https://ba1b46a4.sibforms.com/serve/MUIFAEU9npVwRv42Mqf-n4sgtNmbLn6MDH9hT5I5FXm5ZJidV0swp_WIF1iRyl0eVOI4k2xvy1NyNo9F1W889rm0cT1_rgW9GzqG5BKPCqmHz-Lwx2S71e9AEH3einDAvjwvPI6vJn_bOlx2P2YBa9BLOebsU4tQIPDDgtKMu9y2ZhRHHPqfpV-L1d8V-ccArrJVdmHUbo9E4p2V";
+
+export const BrevoForm = ({ isWide = true }) => {
   const inputRef = useRef(null);
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    // Load external scripts
     const script = document.createElement("script");
     script.src = "https://sibforms.com/forms/end-form/build/main.js";
     script.async = true;
@@ -20,7 +21,6 @@ const BrevoForm = ({ isWide = true }) => {
     recaptchaScript.defer = true;
     document.body.appendChild(recaptchaScript);
 
-    // Cleanup scripts on unmount
     return () => {
       document.body.removeChild(script);
       document.body.removeChild(recaptchaScript);
@@ -29,9 +29,7 @@ const BrevoForm = ({ isWide = true }) => {
 
   useEffect(() => {
     const handleFocus = () => {
-      // Only apply on narrow widths (mobile)
       if (window.innerWidth <= 600) {
-        // Use a timeout to ensure the keyboard has appeared
         setTimeout(() => {
           // Scroll the input into view
           if (inputRef.current) {
@@ -56,7 +54,6 @@ const BrevoForm = ({ isWide = true }) => {
       inputCurrent.addEventListener("focus", handleFocus);
     }
 
-    // Cleanup event listener on unmount
     return () => {
       if (inputCurrent) {
         inputCurrent.removeEventListener("focus", handleFocus);
@@ -234,7 +231,7 @@ const BrevoForm = ({ isWide = true }) => {
         style={{
           textAlign: "center",
           borderRadius: "8px",
-          width: "100%", // Ensure full width
+          width: "100%",
         }}
       >
         <div
@@ -357,7 +354,7 @@ const BrevoForm = ({ isWide = true }) => {
                     <div className="form__label-row">
                       <div className="entry__field">
                         <input
-                          ref={inputRef} // Attach ref here
+                          ref={inputRef}
                           className="input"
                           type="email"
                           id="EMAIL"
@@ -417,7 +414,7 @@ const BrevoForm = ({ isWide = true }) => {
                   style={{ textAlign: "left", width: "100%", padding: "0" }}
                 >
                   <button
-                    ref={buttonRef} // Attach ref here
+                    ref={buttonRef}
                     className="sib-form-block__button sib-form-block__button-with-loader"
                     style={{
                       fontSize: "16px",
@@ -471,5 +468,3 @@ const BrevoForm = ({ isWide = true }) => {
     </>
   );
 };
-
-export default BrevoForm;

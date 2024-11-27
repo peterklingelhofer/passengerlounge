@@ -1,6 +1,9 @@
 import React from "react";
 import ResourceLinks from "gatsby-theme-carbon/src/components/LeftNav/ResourceLinks";
-import BrevoForm from "../../../components/BrevoForm/BrevoForm";
+import {
+  SUBSCRIBE_FORM_ACTION,
+  BrevoForm,
+} from "../../../components/BrevoForm/BrevoForm";
 
 export const links = [
   {
@@ -37,7 +40,7 @@ export const links = [
   },
   {
     title: "Newsletter",
-    href: "https://ba1b46a4.sibforms.com/serve/MUIFAEU9npVwRv42Mqf-n4sgtNmbLn6MDH9hT5I5FXm5ZJidV0swp_WIF1iRyl0eVOI4k2xvy1NyNo9F1W889rm0cT1_rgW9GzqG5BKPCqmHz-Lwx2S71e9AEH3einDAvjwvPI6vJn_bOlx2P2YBa9BLOebsU4tQIPDDgtKMu9y2ZhRHHPqfpV-L1d8V-ccArrJVdmHUbo9E4p2V",
+    href: SUBSCRIBE_FORM_ACTION,
   },
 ];
 

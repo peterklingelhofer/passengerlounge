@@ -129,7 +129,7 @@ Footer.propTypes = {
 const Content = () => (
   <>
     <div style={{ marginBottom: "-2rem" }} />
-    <BrevoForm />
+    <BrevoForm isWide={true} />
   </>
 );
 

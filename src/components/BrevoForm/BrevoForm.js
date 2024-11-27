@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-const BrevoForm = () => {
+const BrevoForm = ({ isWide = true }) => {
   useEffect(() => {
     // Load the main.js script after the component mounts
     const script = document.createElement("script");
@@ -262,7 +262,7 @@ const BrevoForm = () => {
               border: "none",
               direction: "ltr",
               margin: "0 auto",
-              width: "100%", // Ensure full width
+              width: "100%",
             }}
           >
             <form
@@ -277,18 +277,23 @@ const BrevoForm = () => {
                 width: "100%",
               }}
             >
-              {/* Form Title */}
-              <div style={{ padding: "8px 0", width: "100%" }}>
-                <div className="form-title">Let's stay in touch</div>
-              </div>
+              {/* Conditionally Render Form Title and Description */}
+              {isWide ? (
+                <>
+                  {/* Form Title */}
+                  <div style={{ padding: "8px 0", width: "100%" }}>
+                    <div className="form-title">Let's stay in touch</div>
+                  </div>
 
-              {/* Form Description */}
-              <div style={{ padding: "8px 0", width: "100%" }}>
-                <div className="form-description">
-                  Enter your email to stay up to date with the latest updates
-                  from Passenger Lounge.
-                </div>
-              </div>
+                  {/* Form Description */}
+                  <div style={{ padding: "8px 0", width: "100%" }}>
+                    <div className="form-description">
+                      Enter your email to stay up to date with the latest
+                      updates from Passenger Lounge.
+                    </div>
+                  </div>
+                </>
+              ) : null}
 
               {/* Email Input */}
               <div style={{ padding: "8px 0", width: "100%" }}>
@@ -333,6 +338,21 @@ const BrevoForm = () => {
                         display: "none",
                       }}
                     ></label>
+                    {/* Conditionally Render Specification */}
+                    {isWide ? null : (
+                      <label
+                        className="entry__specification"
+                        style={{
+                          fontSize: "12px",
+                          textAlign: "left",
+                          color: "#8390A4",
+                        }}
+                      >
+                        Enter your email to stay up to date with the latest
+                        updates from Passenger Lounge.
+                      </label>
+                    )}
+                    {/* Specification */}
                   </div>
                 </div>
               </div>
@@ -341,7 +361,7 @@ const BrevoForm = () => {
               <div style={{ padding: "8px 0", width: "100%" }}>
                 <div
                   className="sib-form-block"
-                  style={{ textAlign: "left", width: "100%", padding: "0" }} // Remove horizontal padding
+                  style={{ textAlign: "left", width: "100%", padding: "0" }}
                 >
                   <button
                     className="sib-form-block__button sib-form-block__button-with-loader"
@@ -368,7 +388,7 @@ const BrevoForm = () => {
                     >
                       <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                     </svg>
-                    Subscribe to our newsletter
+                    Subscribe {isWide ? "to our newsletter" : ""}
                   </button>
                 </div>
               </div>

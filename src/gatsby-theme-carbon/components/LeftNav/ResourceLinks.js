@@ -44,7 +44,7 @@ export const links = [
 const CustomResources = () => (
   <>
     <ResourceLinks shouldOpenNewTabs links={links} />
-    {/* <BrevoForm isSmallWidth={true} /> */}
+    <BrevoForm isWide={false} />
   </>
 );
 

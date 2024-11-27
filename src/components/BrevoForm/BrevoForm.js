@@ -135,6 +135,19 @@ const BrevoForm = () => {
               filter: invert(1);
               visibility: hidden;
             }
+
+            /* Visually hidden class for accessibility */
+            .visually-hidden {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0, 0, 0, 0);
+              white-space: nowrap;
+              border: 0;
+            }
           `}
         </style>
         {/* Link to Brevo Stylesheet */}
@@ -280,23 +293,14 @@ const BrevoForm = () => {
                 >
                   <div className="form__entry entry_block">
                     <div className="form__label-row">
-                      {/* Optional: Uncomment if you want a label */}
-                      {/* 
+                      {/* Unhide and associate the label with the input */}
                       <label
-                        className="entry__label"
-                        style={{
-                          fontWeight: "700",
-                          textAlign: "left",
-                          fontSize: "16px",
-                          fontFamily: "IBM Plex Sans VF, Helvetica Neue, Arial, sans-serif",
-                          color: "#FFFFFF",
-                        }}
+                        className="entry__label visually-hidden"
                         htmlFor="EMAIL"
                         data-required="*"
                       >
                         Enter your email address to subscribe
-                      </label> 
-                      */}
+                      </label>
                       <div className="entry__field">
                         <input
                           className="input"
@@ -320,7 +324,7 @@ const BrevoForm = () => {
                     </div>
 
                     {/* Error Message */}
-                    <label
+                    <div
                       className="entry__error entry__error--primary"
                       style={{
                         fontSize: "16px",
@@ -331,9 +335,9 @@ const BrevoForm = () => {
                         borderColor: "#ff4949",
                         display: "none",
                       }}
-                    ></label>
+                    ></div>
                     {/* Specification */}
-                    <label
+                    <div
                       className="entry__specification"
                       style={{
                         fontSize: "12px",
@@ -343,7 +347,7 @@ const BrevoForm = () => {
                     >
                       Provide your email address to subscribe. For e.g.,
                       abc@xyz.com
-                    </label>
+                    </div>
                   </div>
                 </div>
               </div>

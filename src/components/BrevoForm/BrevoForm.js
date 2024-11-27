@@ -29,6 +29,11 @@ const BrevoForm = () => {
       <Helmet>
         <style>
           {`
+            /* Apply border-box to all elements for consistent sizing */
+            *, *::before, *::after {
+              box-sizing: border-box;
+            }
+
             #sib-container, 
             .sib-form, 
             .sib-container--large,
@@ -63,7 +68,7 @@ const BrevoForm = () => {
             .sib-form {
               text-align: center;
               background-color: transparent;
-              padding: 20px 20px;
+              padding: 10px; /* Reduced padding */
               border-radius: 8px;
               transition: padding 0.3s ease;
             }
@@ -71,9 +76,10 @@ const BrevoForm = () => {
             .sib-container--large {
               background-color: transparent !important;
               color: #ffffff !important;
-              padding: 10px 20px;
+              padding: 5px 10px; /* Reduced horizontal padding */
               border-radius: 8px;
               border: none;
+              max-width: 100%; /* Remove max-width to allow full width */
             }
 
             /* Input field styling */
@@ -82,6 +88,9 @@ const BrevoForm = () => {
               background-color: rgb(22, 22, 22);
               color: #ffffff;
               border: 1px solid #C0CCD9;
+              width: 100%; /* Ensure full width */
+              padding: 10px;
+              border-radius: 4px;
             }
 
             /* Button styling */
@@ -92,7 +101,7 @@ const BrevoForm = () => {
               background-color: rgb(63, 153, 88);
               border-radius: 3px;
               border: none;
-              padding: 10px 20px;
+              padding: 10px;
               cursor: pointer;
               width: 100%;
               display: flex;
@@ -120,17 +129,18 @@ const BrevoForm = () => {
             @media (max-width: 600px) {
               .sib-container--large {
                 max-width: 100% !important;
-                padding: 10px !important;
+                padding: 5px !important; /* Further reduced padding */
               }
 
               .sib-form {
-                padding: 10px !important;
+                padding: 5px !important; /* Further reduced padding */
               }
 
               .sib-form-block__button {
                 width: 100% !important;
               }
             }
+
             .grecaptcha-badge {
               filter: invert(1);
               visibility: hidden;
@@ -219,11 +229,11 @@ const BrevoForm = () => {
             className="sib-container--large sib-container--vertical"
             style={{
               textAlign: "center",
-              maxWidth: "540px",
               borderRadius: "3px",
               border: "none",
               direction: "ltr",
               margin: "0 auto",
+              width: "100%", // Ensure full width
             }}
           >
             <form
@@ -234,69 +244,18 @@ const BrevoForm = () => {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
+                alignItems: "stretch", // Change to stretch to make children take full width
+                width: "100%", // Ensure form takes full width
               }}
             >
-              {/* Form Title */}
-              {/* <div style={{ padding: "8px 0" }}>
-                <div
-                  className="sib-form-block"
-                  style={{
-                    fontSize: "32px",
-                    textAlign: "left",
-                    fontWeight: "700",
-                    color: "#FFFFFF",
-                    backgroundColor: "transparent",
-                  }}
-                >
-                  <p>Newsletter</p>
-                </div>
-              </div> */}
-
-              {/* Form Description */}
-              {/* <div style={{ padding: "8px 0" }}>
-                <div
-                  className="sib-form-block"
-                  style={{
-                    fontSize: "16px",
-                    textAlign: "left",
-                    color: "#FFFFFF",
-                    backgroundColor: "transparent",
-                  }}
-                >
-                  <div className="sib-text-form-block">
-                    <p>
-                      Subscribe to receive emails when we release new music.
-                    </p>
-                  </div>
-                </div>
-              </div> */}
-
               {/* Email Input */}
               <div style={{ padding: "8px 0", width: "100%" }}>
                 <div
                   className="sib-input sib-form-block"
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", padding: "0" }} // Remove horizontal padding
                 >
                   <div className="form__entry entry_block">
                     <div className="form__label-row">
-                      {/* Optional: Uncomment if you want a label */}
-                      {/* 
-                      <label
-                        className="entry__label"
-                        style={{
-                          fontWeight: "700",
-                          textAlign: "left",
-                          fontSize: "16px",
-                          fontFamily: "IBM Plex Sans VF, Helvetica Neue, Arial, sans-serif",
-                          color: "#FFFFFF",
-                        }}
-                        htmlFor="EMAIL"
-                        data-required="*"
-                      >
-                        Enter your email address to subscribe
-                      </label> 
-                      */}
                       <div className="entry__field">
                         <input
                           className="input"
@@ -352,7 +311,7 @@ const BrevoForm = () => {
               <div style={{ padding: "8px 0", width: "100%" }}>
                 <div
                   className="sib-form-block"
-                  style={{ textAlign: "left", width: "100%" }}
+                  style={{ textAlign: "left", width: "100%", padding: "0" }} // Remove horizontal padding
                 >
                   <button
                     className="sib-form-block__button sib-form-block__button-with-loader"
@@ -362,7 +321,7 @@ const BrevoForm = () => {
                       color: "#FFFFFF",
                       borderRadius: "3px",
                       border: "none",
-                      padding: "10px 20px",
+                      padding: "10px",
                       cursor: "pointer",
                       width: "100%",
                       display: "flex",

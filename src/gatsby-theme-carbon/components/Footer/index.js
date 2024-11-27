@@ -1,13 +1,6 @@
 // src/gatsby-theme-carbon/components/Footer/index.js
 import React from "react";
-import {
-  footer,
-  grid,
-  nav,
-  listItem,
-  logo,
-  content,
-} from "./Footer.module.scss";
+import { footer, grid, nav, listItem, content } from "./Footer.module.scss";
 import { Row, Grid, Column } from "gatsby-theme-carbon/src/components/Grid";
 import { links as resourceLinks } from "../LeftNav/ResourceLinks";
 import { BrevoForm } from "../../../components/BrevoForm/BrevoForm";
@@ -57,43 +50,6 @@ const Footer = ({ Content, links }) => {
       </Grid>
     </footer>
   );
-};
-
-const DefaultContent = () => (
-  <p>
-    Shadow this content by importing the theme Footer and supplying your own
-    props.
-  </p>
-);
-
-Footer.defaultProps = {
-  links: {
-    firstCol: [
-      { href: "https://www.ibm.com/design", linkText: "Sample" },
-      { href: "https://www.ibm.com/design", linkText: "Links" },
-      {
-        href: "https://www.ibm.com/design",
-        linkText: "Column",
-      },
-      { href: "https://www.ibm.com/design", linkText: "One" },
-    ],
-    secondCol: [
-      {
-        href: "https://www.ibm.com/design",
-        linkText: "Dribbble",
-      },
-      {
-        href: "https://www.ibm.com/design",
-        linkText: "Medium",
-      },
-      {
-        href: "https://www.ibm.com/design",
-        linkText: "Twitter",
-      },
-    ],
-  },
-  Content: DefaultContent,
-  Logo: null,
 };
 
 Footer.propTypes = {

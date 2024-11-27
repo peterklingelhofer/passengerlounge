@@ -1,7 +1,7 @@
 import React from "react";
 import ResourceLinks from "gatsby-theme-carbon/src/components/LeftNav/ResourceLinks";
 import {
-  SUBSCRIBE_FORM_ACTION,
+  // SUBSCRIBE_FORM_ACTION,
   BrevoForm,
 } from "../../../components/BrevoForm/BrevoForm";
 
@@ -38,10 +38,10 @@ export const links = [
     title: "Twitter",
     href: "https://twitter.com/passengerlounge",
   },
-  {
-    title: "Newsletter",
-    href: SUBSCRIBE_FORM_ACTION,
-  },
+  // {
+  //   title: "Newsletter",
+  //   href: SUBSCRIBE_FORM_ACTION,
+  // },
 ];
 
 const CustomResources = () => (

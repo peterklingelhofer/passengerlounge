@@ -7,7 +7,7 @@ import {
   listItem,
   logo,
   content,
-} from "gatsby-theme-carbon/src/components/Footer/Footer.module.scss";
+} from "./Footer.module.scss";
 import { Row, Grid, Column } from "gatsby-theme-carbon/src/components/Grid";
 import { links as resourceLinks } from "../LeftNav/ResourceLinks";
 import BrevoForm from "../../../components/BrevoForm/BrevoForm";
@@ -146,7 +146,7 @@ Footer.propTypes = {
 
 const Content = () => (
   <>
-    <div style={{ marginBottom: "-40px" }} />
+    <div style={{ marginBottom: "-2rem" }} />
     <BrevoForm />
   </>
 );

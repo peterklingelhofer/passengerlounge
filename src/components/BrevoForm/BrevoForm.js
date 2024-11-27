@@ -34,6 +34,7 @@ const BrevoForm = () => {
               box-sizing: border-box;
             }
 
+            /* General Font and Color Styling */
             #sib-container, 
             .sib-form, 
             .sib-container--large,
@@ -71,15 +72,17 @@ const BrevoForm = () => {
               padding: 10px; /* Reduced padding */
               border-radius: 8px;
               transition: padding 0.3s ease;
+              width: 100%; /* Ensure full width */
             }
 
             .sib-container--large {
               background-color: transparent !important;
               color: #ffffff !important;
-              padding: 5px 10px; /* Reduced horizontal padding */
+              padding: 10px; /* Adjusted padding for better spacing */
               border-radius: 8px;
               border: none;
               max-width: 100%; /* Remove max-width to allow full width */
+              width: 100%; /* Ensure full width */
             }
 
             /* Input field styling */
@@ -141,9 +144,28 @@ const BrevoForm = () => {
               }
             }
 
+            /* Hide reCAPTCHA badge */
             .grecaptcha-badge {
               filter: invert(1);
               visibility: hidden;
+            }
+
+            /* Custom Title and Description Styling */
+            .form-title {
+              font-size: 32px;
+              text-align: left;
+              font-weight: 700;
+              color: #FFFFFF;
+              background-color: transparent;
+              width: 100%;
+            }
+
+            .form-description {
+              font-size: 16px;
+              text-align: left;
+              color: #FFFFFF;
+              background-color: transparent;
+              width: 100%;
             }
           `}
         </style>
@@ -160,9 +182,14 @@ const BrevoForm = () => {
         style={{
           textAlign: "center",
           borderRadius: "8px",
+          width: "100%", // Ensure full width
         }}
       >
-        <div id="sib-form-container" className="sib-form-container">
+        <div
+          id="sib-form-container"
+          className="sib-form-container"
+          style={{ width: "100%" }}
+        >
           {/* Error Message */}
           <div
             id="error-message"
@@ -184,6 +211,7 @@ const BrevoForm = () => {
               <svg
                 viewBox="0 0 512 512"
                 className="sib-icon sib-notification__icon"
+                style={{ width: "24px", height: "24px", marginRight: "8px" }}
               >
                 <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
               </svg>
@@ -214,6 +242,7 @@ const BrevoForm = () => {
               <svg
                 viewBox="0 0 512 512"
                 className="sib-icon sib-notification__icon"
+                style={{ width: "24px", height: "24px", marginRight: "8px" }}
               >
                 <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
               </svg>
@@ -244,15 +273,28 @@ const BrevoForm = () => {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "stretch", // Change to stretch to make children take full width
-                width: "100%", // Ensure form takes full width
+                alignItems: "stretch",
+                width: "100%",
               }}
             >
+              {/* Form Title */}
+              <div style={{ padding: "8px 0", width: "100%" }}>
+                <div className="form-title">Let's stay in touch</div>
+              </div>
+
+              {/* Form Description */}
+              <div style={{ padding: "8px 0", width: "100%" }}>
+                <div className="form-description">
+                  Enter your email to stay up to date with the latest updates
+                  from Passenger Lounge.
+                </div>
+              </div>
+
               {/* Email Input */}
               <div style={{ padding: "8px 0", width: "100%" }}>
                 <div
                   className="sib-input sib-form-block"
-                  style={{ width: "100%", padding: "0" }} // Remove horizontal padding
+                  style={{ width: "100%", padding: "0" }}
                 >
                   <div className="form__entry entry_block">
                     <div className="form__label-row">
@@ -291,18 +333,6 @@ const BrevoForm = () => {
                         display: "none",
                       }}
                     ></label>
-                    {/* Specification */}
-                    <label
-                      className="entry__specification"
-                      style={{
-                        fontSize: "12px",
-                        textAlign: "left",
-                        color: "#8390A4",
-                      }}
-                    >
-                      Provide your email address to subscribe. For e.g.,
-                      abc@xyz.com
-                    </label>
                   </div>
                 </div>
               </div>
@@ -338,7 +368,7 @@ const BrevoForm = () => {
                     >
                       <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                     </svg>
-                    Subscribe
+                    Subscribe to our newsletter
                   </button>
                 </div>
               </div>

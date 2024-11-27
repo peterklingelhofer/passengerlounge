@@ -22,7 +22,7 @@ const Footer = ({ Content, links }) => {
           >
             <Content />
           </Column>
-          <Column colLg={2} colMd={2}>
+          <Column colLg={2} colMd={2} colSm={2}>
             <ul className={nav}>
               {firstCol &&
                 firstCol.map((link, i) => (
@@ -34,7 +34,7 @@ const Footer = ({ Content, links }) => {
                 ))}
             </ul>
           </Column>
-          <Column colLg={2} colMd={2}>
+          <Column colLg={2} colMd={2} colSm={2}>
             <ul className={nav}>
               {secondCol &&
                 secondCol.map((link, i) => (

@@ -1,15 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 
 const BrevoForm = ({ isWide = true }) => {
+  // Create refs for the input and button
+  const inputRef = useRef(null);
+  const buttonRef = useRef(null);
+
   useEffect(() => {
-    // Load the main.js script after the component mounts
+    // Load external scripts
     const script = document.createElement("script");
     script.src = "https://sibforms.com/forms/end-form/build/main.js";
     script.async = true;
     document.body.appendChild(script);
 
-    // Load reCAPTCHA script
     const recaptchaScript = document.createElement("script");
     recaptchaScript.src =
       "https://www.google.com/recaptcha/api.js?render=6LeZMIoqAAAAAMtwsAV1Y9b-DsmRkJXOr1QbE6AQ&hl=en";
@@ -21,6 +24,43 @@ const BrevoForm = ({ isWide = true }) => {
     return () => {
       document.body.removeChild(script);
       document.body.removeChild(recaptchaScript);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleFocus = () => {
+      // Only apply on narrow widths (mobile)
+      if (window.innerWidth <= 600) {
+        // Use a timeout to ensure the keyboard has appeared
+        setTimeout(() => {
+          // Scroll the input into view
+          if (inputRef.current) {
+            inputRef.current.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+          // Optionally, also scroll the button into view
+          if (buttonRef.current) {
+            buttonRef.current.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+        }, 300); // Adjust the timeout as needed
+      }
+    };
+
+    const inputCurrent = inputRef.current;
+    if (inputCurrent) {
+      inputCurrent.addEventListener("focus", handleFocus);
+    }
+
+    // Cleanup event listener on unmount
+    return () => {
+      if (inputCurrent) {
+        inputCurrent.removeEventListener("focus", handleFocus);
+      }
     };
   }, []);
 
@@ -69,7 +109,7 @@ const BrevoForm = ({ isWide = true }) => {
             .sib-form {
               text-align: center;
               background-color: transparent;
-              padding: 10px; /* Reduced padding */
+              padding: 10px;
               border-radius: 8px;
               transition: padding 0.3s ease;
               width: 100%; /* Ensure full width */
@@ -132,11 +172,10 @@ const BrevoForm = ({ isWide = true }) => {
             @media (max-width: 600px) {
               .sib-container--large {
                 max-width: 100% !important;
-                padding: 5px !important; /* Further reduced padding */
               }
 
               .sib-form {
-                padding: 5px !important; /* Further reduced padding */
+                padding-bottom: 50px;
               }
 
               .sib-form-block__button {
@@ -167,6 +206,18 @@ const BrevoForm = ({ isWide = true }) => {
               background-color: transparent;
               width: 100%;
             }
+
+            /* Add extra padding at the bottom for mobile to prevent keyboard overlap */
+            @media (max-width: 600px) {
+              body {
+                padding-bottom: 300px; /* Adjust based on keyboard height */
+              }
+            }
+
+            /* Optional: Smooth scrolling behavior */
+            html {
+              scroll-behavior: smooth;
+            }
           `}
         </style>
         {/* Link to Brevo Stylesheet */}
@@ -174,6 +225,8 @@ const BrevoForm = ({ isWide = true }) => {
           rel="stylesheet"
           href="https://sibforms.com/forms/end-form/build/sib-styles.css"
         />
+        {/* Ensure viewport is set correctly */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
 
       {/* Brevo Form HTML */}
@@ -305,6 +358,7 @@ const BrevoForm = ({ isWide = true }) => {
                     <div className="form__label-row">
                       <div className="entry__field">
                         <input
+                          ref={inputRef} // Attach ref here
                           className="input"
                           type="email"
                           id="EMAIL"
@@ -364,6 +418,7 @@ const BrevoForm = ({ isWide = true }) => {
                   style={{ textAlign: "left", width: "100%", padding: "0" }}
                 >
                   <button
+                    ref={buttonRef} // Attach ref here
                     className="sib-form-block__button sib-form-block__button-with-loader"
                     style={{
                       fontSize: "16px",

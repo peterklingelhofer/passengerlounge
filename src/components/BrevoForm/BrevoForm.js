@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 
+// Edit this form at https://app.brevo.com
 export const SUBSCRIBE_FORM_ACTION =
-  "https://ba1b46a4.sibforms.com/serve/MUIFAEU9npVwRv42Mqf-n4sgtNmbLn6MDH9hT5I5FXm5ZJidV0swp_WIF1iRyl0eVOI4k2xvy1NyNo9F1W889rm0cT1_rgW9GzqG5BKPCqmHz-Lwx2S71e9AEH3einDAvjwvPI6vJn_bOlx2P2YBa9BLOebsU4tQIPDDgtKMu9y2ZhRHHPqfpV-L1d8V-ccArrJVdmHUbo9E4p2V";
+  "https://ba1b46a4.sibforms.com/serve/MUIFAMybqL3hQUBJWd3R2YS2lkb3B_aXkLRs1_hKjhOvBr_1hJz_nk2TkEMw_QKGwAS_gdgHL0U2DOxFtnIn3kqOIguM993_ywV66XQMbX8bJvuS2R5x5-Feep_r303xAh8F3hE-rTclke3ZMylLU9DNOPAtpVFUTOOljKogcuMyDJUY_3BG8IcWKlFQqM_UQjAw8Or5GILglTof";
 
 export const BrevoForm = ({ isWide = true }) => {
   const inputRef = useRef(null);

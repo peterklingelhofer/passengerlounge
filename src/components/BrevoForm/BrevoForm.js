@@ -1,3 +1,4 @@
+import "../../styles/sib-styles.css";
 import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 
@@ -218,10 +219,10 @@ export const BrevoForm = ({ isWide = true }) => {
           `}
         </style>
         {/* Link to Brevo Stylesheet */}
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://sibforms.com/forms/end-form/build/sib-styles.css"
-        />
+        /> */}
         {/* Ensure viewport is set correctly */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>

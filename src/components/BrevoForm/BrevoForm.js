@@ -1,5 +1,5 @@
 import "../../styles/sib-styles.css";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 
 // Edit this form at https://app.brevo.com/contact/forms/subscription
@@ -9,6 +9,58 @@ export const SUBSCRIBE_FORM_ACTION =
 export const BrevoForm = ({ isWide = true }) => {
   const inputRef = useRef(null);
   const buttonRef = useRef(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    try {
+      // Wait for reCAPTCHA to be ready and get the token
+      if (window.grecaptcha) {
+        const token = await window.grecaptcha.execute(
+          "6LeZMIoqAAAAAMtwsAV1Y9b-DsmRkJXOr1QbE6AQ",
+          { action: "submit" }
+        );
+        formData.append("g-recaptcha-response", token);
+      }
+
+      // Prepare the data for submission
+      const data = new URLSearchParams();
+      for (const [key, value] of formData.entries()) {
+        data.append(key, value);
+      }
+
+      // Send the data via fetch()
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data.toString(),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
+
+      setIsSubmitting(false);
+      if (response.ok) {
+        // Show success message
+        // setFormStatus("success");
+        form.reset(); // Reset the form if needed
+      } else {
+        // Show error message
+        // setFormStatus("error");
+      }
+    } catch (error) {
+      setIsSubmitting(false);
+      // Handle error
+      console.error("Form submission error:", error);
+      // setFormStatus("error");
+    } finally {
+      // setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -327,6 +379,7 @@ export const BrevoForm = ({ isWide = true }) => {
                 alignItems: "stretch",
                 width: "100%",
               }}
+              onSubmit={handleSubmit}
             >
               {/* Conditionally Render Form Title and Description */}
               {isWide ? (
@@ -441,7 +494,8 @@ export const BrevoForm = ({ isWide = true }) => {
                     >
                       <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                     </svg>
-                    Subscribe {isWide ? "to our newsletter" : ""}
+                    {isSubmitting ? "Submitting..." : "Subscribe"}
+                    {isWide && !isSubmitting ? " to our newsletter" : ""}
                   </button>
                 </div>
               </div>
@@ -463,6 +517,7 @@ export const BrevoForm = ({ isWide = true }) => {
                 style={{ display: "none" }}
               />
               <input type="hidden" name="locale" value="en" />
+              <input type="hidden" name="html_type" value="simple" />
             </form>
           </div>
         </div>

@@ -2,9 +2,9 @@ import "../../styles/sib-styles.css";
 import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 
-// Edit this form at https://app.brevo.com
+// Edit this form at https://app.brevo.com/contact/forms/subscription
 export const SUBSCRIBE_FORM_ACTION =
-  "https://ba1b46a4.sibforms.com/serve/MUIFAMybqL3hQUBJWd3R2YS2lkb3B_aXkLRs1_hKjhOvBr_1hJz_nk2TkEMw_QKGwAS_gdgHL0U2DOxFtnIn3kqOIguM993_ywV66XQMbX8bJvuS2R5x5-Feep_r303xAh8F3hE-rTclke3ZMylLU9DNOPAtpVFUTOOljKogcuMyDJUY_3BG8IcWKlFQqM_UQjAw8Or5GILglTof";
+  "https://ba1b46a4.sibforms.com/serve/MUIFADgMY0XJGQefwq79quewSzSlcHCBMMoC9lyTgY996a8_vFFo4N71nrUcwZ5Yb0U8cdqbhZnAZUWMhU7ninhRoiY0EWpqDv4KyuQVPTeumELfZk2LFbQpj7fSlPqt0Gps2C2X9sI4wEkGcmDoBbnkAG0bd-VQULXFXZ78uQwKgOkPG0oy78lVo41BjFol4Jn8ryOrX0TtriSo";
 
 export const BrevoForm = ({ isWide = true }) => {
   const inputRef = useRef(null);

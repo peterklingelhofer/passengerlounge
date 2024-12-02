@@ -3,7 +3,7 @@ import React from "react";
 import { footer, grid, nav, listItem, content } from "./Footer.module.scss";
 import { Row, Grid, Column } from "gatsby-theme-carbon/src/components/Grid";
 import { links as resourceLinks } from "../LeftNav/ResourceLinks";
-import { BrevoForm } from "../../../components/BrevoForm/BrevoForm";
+import { EmailSubscriptionForm } from "../../../components/EmailSubscriptionForm/EmailSubscriptionForm";
 import PropTypes from "prop-types";
 
 const Footer = ({ Content, links }) => {
@@ -85,7 +85,7 @@ Footer.propTypes = {
 const Content = () => (
   <>
     <div style={{ marginBottom: "-2rem" }} />
-    <BrevoForm isWide={true} />
+    <EmailSubscriptionForm isWide={true} />
   </>
 );
 

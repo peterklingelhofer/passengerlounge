@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 export const SUBSCRIBE_FORM_ACTION =
   "https://ba1b46a4.sibforms.com/serve/MUIFADgMY0XJGQefwq79quewSzSlcHCBMMoC9lyTgY996a8_vFFo4N71nrUcwZ5Yb0U8cdqbhZnAZUWMhU7ninhRoiY0EWpqDv4KyuQVPTeumELfZk2LFbQpj7fSlPqt0Gps2C2X9sI4wEkGcmDoBbnkAG0bd-VQULXFXZ78uQwKgOkPG0oy78lVo41BjFol4Jn8ryOrX0TtriSo";
 
-export const BrevoForm = ({ isWide = true }) => {
+export const EmailSubscriptionForm = ({ isWide = true }) => {
   const inputRef = useRef(null);
   const buttonRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);

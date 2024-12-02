@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 // Edit this form at https://app.brevo.com/contact/forms/subscription
 export const SUBSCRIBE_FORM_ACTION =
-  "https://ba1b46a4.sibforms.com/serve/MUIFADgMY0XJGQefwq79quewSzSlcHCBMMoC9lyTgY996a8_vFFo4N71nrUcwZ5Yb0U8cdqbhZnAZUWMhU7ninhRoiY0EWpqDv4KyuQVPTeumELfZk2LFbQpj7fSlPqt0Gps2C2X9sI4wEkGcmDoBbnkAG0bd-VQULXFXZ78uQwKgOkPG0oy78lVo41BjFol4Jn8ryOrX0TtriSo";
+  "https://ba1b46a4.sibforms.com/serve/MUIFAD98b-2ErQZIN3KoJU7H6NgHsJUwPeUqrPqMtTAMdKbs2P6DNwXmTGh4NZoFeJ-qwq17Om4iDRyUJULLyWWEcyTw-QzdhhUw8Nub8rKVyY9Dgrf3swpQnZvHb6BAlOI101gqFuUvTavdQgGQ9HAVpqYxHukwcy3P6FgRhYm5bV5pNzesCUmydT-dw4e_SNay5osHRKvDC71A";
 
 export const EmailSubscriptionForm = ({ isWide = true }) => {
   const inputRef = useRef(null);
@@ -13,53 +13,53 @@ export const EmailSubscriptionForm = ({ isWide = true }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setIsSubmitting(true);
+    // setIsSubmitting(true);
 
-    const form = event.target;
-    const formData = new FormData(form);
+    // const form = event.target;
+    // const formData = new FormData(form);
 
-    try {
-      // Wait for reCAPTCHA to be ready and get the token
-      if (window.grecaptcha) {
-        const token = await window.grecaptcha.execute(
-          "6LeZMIoqAAAAAMtwsAV1Y9b-DsmRkJXOr1QbE6AQ",
-          { action: "submit" }
-        );
-        formData.append("g-recaptcha-response", token);
-      }
+    // try {
+    //   // Wait for reCAPTCHA to be ready and get the token
+    //   if (window.grecaptcha) {
+    //     const token = await window.grecaptcha.execute(
+    //       "6LeZMIoqAAAAAMtwsAV1Y9b-DsmRkJXOr1QbE6AQ",
+    //       { action: "submit" }
+    //     );
+    //     formData.append("g-recaptcha-response", token);
+    //   }
 
-      // Prepare the data for submission
-      const data = new URLSearchParams();
-      for (const [key, value] of formData.entries()) {
-        data.append(key, value);
-      }
+    //   // Prepare the data for submission
+    //   const data = new URLSearchParams();
+    //   for (const [key, value] of formData.entries()) {
+    //     data.append(key, value);
+    //   }
 
-      // Send the data via fetch()
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: data.toString(),
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      });
+    //   // Send the data via fetch()
+    //   const response = await fetch(form.action, {
+    //     method: "POST",
+    //     body: data.toString(),
+    //     headers: {
+    //       "Content-Type": "application/x-www-form-urlencoded",
+    //     },
+    //   });
 
-      setIsSubmitting(false);
-      if (response.ok) {
-        // Show success message
-        // setFormStatus("success");
-        form.reset(); // Reset the form if needed
-      } else {
-        // Show error message
-        // setFormStatus("error");
-      }
-    } catch (error) {
-      setIsSubmitting(false);
-      // Handle error
-      console.error("Form submission error:", error);
-      // setFormStatus("error");
-    } finally {
-      // setIsSubmitting(false);
-    }
+    //   setIsSubmitting(false);
+    //   if (response.ok) {
+    //     // Show success message
+    //     // setFormStatus("success");
+    //     form.reset(); // Reset the form if needed
+    //   } else {
+    //     // Show error message
+    //     // setFormStatus("error");
+    //   }
+    // } catch (error) {
+    //   setIsSubmitting(false);
+    //   // Handle error
+    //   console.error("Form submission error:", error);
+    //   // setFormStatus("error");
+    // } finally {
+    //   // setIsSubmitting(false);
+    // }
   };
 
   useEffect(() => {

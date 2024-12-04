@@ -7,6 +7,25 @@
   z-index: 2;
 }
 
+/* Hide the footer on screens that are 1055px or less */
+// @media screen and (min-width: 1056px) {
+//   footer {
+//     display: none !important;
+//   }
+// }
+
+@media screen and (max-width: 1055px) {
+  /* Hide the entire lower element below the links */
+  .bx--grid.Footer-module--grid--1FR_d > .bx--row:last-child {
+    display: none;
+  }
+
+  /* Adjust the height of the footer and remove empty space */
+  .bx--grid.Footer-module--grid--1FR_d {
+    min-height: 0;
+  }
+}
+
 .grid {
   min-height: 370px;
   padding-top: $spacing-07;

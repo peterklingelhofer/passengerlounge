@@ -15,10 +15,10 @@ const Footer = ({ Content, links }) => {
         <Row>
           <Column
             className={content}
-            colLg={4}
-            colMd={4}
-            colSm={3}
-            offsetLg={2}
+            colLg={6} // Changed from 4 to 6
+            colMd={6} // Changed from 4 to 6
+            colSm={4} // Changed from 3 to 4
+            offsetLg={0} // Removed offset
           >
             <Content />
           </Column>

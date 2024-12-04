@@ -40,7 +40,7 @@ export const links = [
   },
   {
     title: "Newsletter",
-    href: SUBSCRIBE_FORM_ACTION,
+    href: "https://cdn.forms-content-1.sg-form.com/d58ad9f4-b028-11ef-b98b-32170b0fc806",
   },
 ];
 

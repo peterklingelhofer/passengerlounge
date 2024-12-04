@@ -1,4 +1,3 @@
-import "../../styles/sib-styles.css";
 import React from "react";
 
 export const EmailSubscriptionForm = ({ isWide = true }) => {

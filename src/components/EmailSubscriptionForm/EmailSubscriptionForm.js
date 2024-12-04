@@ -11,6 +11,7 @@ export const EmailSubscriptionForm = ({ isWide = true }) => {
         minHeight: 490,
         width: "100%",
       }}
+      title="Newsletter subscription form"
     />
   );
 };

@@ -7,7 +7,7 @@ export const EmailSubscriptionForm = ({ isWide = true }) => {
       style={{
         marginLeft: "auto",
         marginRight: "auto",
-        minHeight: 490,
+        minHeight: 442,
         width: "100%",
       }}
       title="Newsletter subscription form"

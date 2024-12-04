@@ -14,17 +14,16 @@
 //   }
 // }
 
-@media screen and (max-width: 1055px) {
   /* Hide the entire lower element below the links */
-  .bx--grid.Footer-module--grid--1FR_d > .bx--row:last-child {
-    display: none;
-  }
-
-  /* Adjust the height of the footer and remove empty space */
-  .bx--grid.Footer-module--grid--1FR_d {
-    min-height: 0;
-  }
+.bx--grid.Footer-module--grid--1FR_d > .bx--row:last-child {
+  display: none;
 }
+
+/* Adjust the height of the footer and remove empty space */
+.bx--grid.Footer-module--grid--1FR_d {
+  min-height: 0;
+}
+// }
 
 .grid {
   min-height: 370px;
@@ -61,14 +60,7 @@
 
 .listItem {
   display: block;
-
-  @include carbon--breakpoint("sm") {
-    margin: 0 0 $spacing-03 0;
-  }
-
-  @include carbon--breakpoint("lg") {
-    margin: 0;
-  }
+  margin: 0 0 $spacing-03 0;
 }
 
 .footer .content a {
@@ -78,7 +70,7 @@
 
 .footer .listItem a {
   @include carbon--type-style("body-long-01");
-  color: $carbon--gray-10 !important; //needed to get the color correct on the homepage, we are setting all homepage links to a light blue in the homepage sass file.
+  color: $carbon--gray-10 !important; // needed to get the color correct on the homepage, we are setting all homepage links to a light blue in the homepage sass file.
   text-decoration: none;
   transition: $duration--fast-01 motion(standard, productive);
 

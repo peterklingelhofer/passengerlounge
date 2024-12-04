@@ -1,8 +1,8 @@
 import React from "react";
 import ResourceLinks from "gatsby-theme-carbon/src/components/LeftNav/ResourceLinks";
 import {
-  SUBSCRIBE_FORM_ACTION,
-  // EmailSubscriptionForm,
+  // SUBSCRIBE_FORM_ACTION,
+  EmailSubscriptionForm,
 } from "../../../components/EmailSubscriptionForm/EmailSubscriptionForm";
 
 export const links = [
@@ -38,16 +38,16 @@ export const links = [
     title: "Twitter",
     href: "https://twitter.com/passengerlounge",
   },
-  {
-    title: "Newsletter",
-    href: SUBSCRIBE_FORM_ACTION,
-  },
+  // {
+  //   title: "Newsletter",
+  //   href: SUBSCRIBE_FORM_ACTION,
+  // },
 ];
 
 const CustomResources = () => (
   <>
     <ResourceLinks shouldOpenNewTabs links={links} />
-    {/* <EmailSubscriptionForm isWide={false} /> */}
+    <EmailSubscriptionForm isWide={false} />
   </>
 );
 

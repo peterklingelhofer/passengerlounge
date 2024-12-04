@@ -13,16 +13,10 @@ const Footer = ({ Content, links }) => {
     <footer className={footer}>
       <Grid className={grid}>
         <Row>
-          <Column
-            className={content}
-            colLg={6} // Changed from 4 to 6
-            colMd={6} // Changed from 4 to 6
-            colSm={4} // Changed from 3 to 4
-            offsetLg={0} // Removed offset
-          >
+          <Column className={content} colLg={6} colMd={5} colSm={4}>
             <Content />
           </Column>
-          <Column colLg={2} colMd={2} colSm={2}>
+          <Column colLg={2} colMd={1} colSm={2} offsetMd={-1}>
             <ul className={nav}>
               {firstCol &&
                 firstCol.map((link, i) => (
@@ -34,7 +28,7 @@ const Footer = ({ Content, links }) => {
                 ))}
             </ul>
           </Column>
-          <Column colLg={2} colMd={2} colSm={2}>
+          <Column colLg={2} colMd={1} colSm={2}>
             <ul className={nav}>
               {secondCol &&
                 secondCol.map((link, i) => (

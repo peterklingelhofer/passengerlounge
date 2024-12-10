@@ -1,4 +1,5 @@
-/* eslint-disable global-require */
+// src/gatsby-theme-carbon/components/Layout.js
+
 import React, { useLayoutEffect } from "react";
 
 import LeftNav from "gatsby-theme-carbon/src/components/LeftNav";

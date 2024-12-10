@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from "react";
+// src/components/ThemeToggle/ThemeToggle.js
+import React from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import setDarkMode, { initializeDarkMode } from "../../utils/setDarkMode";
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(initializeDarkMode() === "dark");
-
-  useEffect(() => {
-    setDarkMode(isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
+  const isBrowser = typeof window !== "undefined";
+  const storedTheme = isBrowser ? localStorage.getItem("theme") : null;
+  const initialMode = storedTheme || "dark";
+  const isDarkMode = initialMode === "dark";
 
   const handleToggle = () => {
-    setIsDarkMode((prevMode) => !prevMode);
+    if (isBrowser) {
+      const root = window.document.documentElement;
+      const currentTheme =
+        root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", newTheme);
+      root.setAttribute("data-theme", newTheme);
+    }
   };
 
   return (

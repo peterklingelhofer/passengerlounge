@@ -7,17 +7,16 @@ body {
   overflow-x: hidden;
 }
 
-html {
-  &.light-mode {
+// html[data-theme="dark"] {
+//   /* dark styles */
+// }
+html[data-theme='light'] {
+  filter: invert(1) hue-rotate(180deg);
+  .gatsby-resp-image-image,
+  img[alt="viscous album cover"] {
     filter: invert(1) hue-rotate(180deg);
-
-    .gatsby-resp-image-image,
-    img[alt="viscous album cover"] {
-      filter: invert(1) hue-rotate(180deg);
-    }
   }
 }
-
 
 // hide page last updated date text
 .last-modified-date-module--text--1RmBx {

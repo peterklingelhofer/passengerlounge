@@ -4,6 +4,9 @@
 - title: Upcoming Shows
   pages:
     - path: /upcoming-shows
+- title: News
+  pages:
+    - path: /news
 # - title: Gallery
 #   pages:
 #     - path: /gallery

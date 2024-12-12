@@ -1,5 +1,5 @@
 import React from "react";
-import { UpToTop20 } from "@carbon/icons-react";
+import { UpToTop } from "@carbon/icons-react";
 import { button } from "./ScrollDownBtn.module.scss";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -10,7 +10,7 @@ const ScrollDownBtn = () => (
       type="button"
       aria-label="Scroll to next section"
     >
-      <UpToTop20 />
+      <UpToTop />
     </button>
   </AnchorLink>
 );

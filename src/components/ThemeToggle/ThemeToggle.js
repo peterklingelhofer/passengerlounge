@@ -1,15 +1,18 @@
 // src/components/ThemeToggle/ThemeToggle.js
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
+import NavContext from "gatsby-theme-carbon/src/util/context/NavContext";
 
 const themeToggleStyle = {
   position: "fixed",
   top: 13,
   right: 50,
-  zIndex: 99999,
+  zIndex: 10000,
 };
 
 const ThemeToggle = () => {
+  const { searchIsOpen } = useContext(NavContext);
+
   const isBrowser = typeof window !== "undefined";
 
   const getPreferredTheme = () => {
@@ -35,6 +38,9 @@ const ThemeToggle = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
+  if (searchIsOpen) {
+    return null;
+  }
   return (
     <div style={themeToggleStyle}>
       <DarkModeSwitch

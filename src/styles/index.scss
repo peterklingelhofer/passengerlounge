@@ -30,8 +30,8 @@ a.bx--side-nav__link--current::before {
   background-color: #019b50 !important;
 }
 
-// hide edit link module
-.EditLink-module--row--2vJiZ {
+// hide edit link module "Edit this page on GitHub"
+.EditLink-module--row--04499 {
   display: none !important;
 }
 
@@ -58,7 +58,7 @@ button[aria-label="Switch sites"] {
 }
 
 // hide feedback smiley face modal button
-.LaunchButton-module--button--30iL7 {
+button[aria-label="This launches a modal form to give website feedback."] {
   display: none !important;
 }
 

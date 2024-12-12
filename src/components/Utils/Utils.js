@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useWindowScroll } from "beautiful-react-hooks";
 import cx from "classnames";
 import ScrollDownBtn from "../ScrollDownBtn";
 import * as styles from "./Utils.module.scss";
+import { useWindowScroll } from "../../hooks/useWindowScroll";
 
 const Utils = () => {
   const [hidden, setHidden] = useState(false);

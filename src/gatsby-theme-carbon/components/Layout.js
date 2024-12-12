@@ -4,7 +4,7 @@ import React, { useLayoutEffect } from "react";
 
 import LeftNav from "gatsby-theme-carbon/src/components/LeftNav";
 import Header from "gatsby-theme-carbon/src/components/Header";
-import Switcher from "gatsby-theme-carbon/src/components/Switcher";
+// import Switcher from "gatsby-theme-carbon/src/components/Switcher";
 import Footer from "gatsby-theme-carbon/src/components/Footer";
 import Container from "gatsby-theme-carbon/src/components/Container";
 import Stars from "../../components/Stars";
@@ -57,7 +57,7 @@ const Layout = ({
         pageKeywords={pageKeywords}
       />
       <Header />
-      <Switcher />
+      {/* <Switcher /> */}
       <LeftNav homepage={homepage} is404Page={is404} theme={theme} />
       <Container homepage={homepage} theme={theme}>
         {pageTitle !== "" && <Stars isHome={false} />}

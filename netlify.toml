@@ -4,7 +4,7 @@
   command = "yarn build"
 
 [build.environment]
-  NODE_VERSION = "16.x"
+  NODE_VERSION = "20"
 
 [functions]
   directory = "netlify/functions"

@@ -34,14 +34,14 @@ export const links = [
     title: "Twitter",
     href: "https://twitter.com/passengerlounge",
   },
-  {
-    title: "Newsletter",
-    href: "https://cdn.forms-content-1.sg-form.com/d58ad9f4-b028-11ef-b98b-32170b0fc806",
-  },
   // {
   //   title: "Newsletter",
-  //   href: "https://passengerlounge.substack.com",
+  //   href: "https://cdn.forms-content-1.sg-form.com/d58ad9f4-b028-11ef-b98b-32170b0fc806",
   // },
+  {
+    title: "Newsletter",
+    href: "https://passengerlounge.substack.com",
+  },
 ];
 
 const CustomResources = () => (

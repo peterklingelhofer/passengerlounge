@@ -3,7 +3,7 @@ import React from "react";
 import { footer, grid, nav, listItem, content } from "./Footer.module.scss";
 import { Row, Grid, Column } from "gatsby-theme-carbon/src/components/Grid";
 import { links as resourceLinks } from "../LeftNav/ResourceLinks";
-import { EmailSubscriptionForm } from "../../../components/EmailSubscriptionForm/EmailSubscriptionForm";
+// import { EmailSubscriptionForm } from "../../../components/EmailSubscriptionForm/EmailSubscriptionForm";
 import PropTypes from "prop-types";
 
 const Footer = ({ Content, links }) => {
@@ -78,23 +78,11 @@ Footer.propTypes = {
 
 const Content = () => (
   <>
-    {/* <div style={{ bottom: 0 }}>
-      <iframe
-        src="https://passengerlounge.substack.com/embed"
-        title="newsletter-subscribe"
-        style={{
-          background:
-            "linear-gradient(0deg, rgba(22,22,22,1) 0%, rgba(26,26,26,1) 95%, rgba(22,22,22,1) 100%)",
-          clipPath: "inset(0 0 17% 0)",
-          height: "100%",
-          width: "98%",
-        }}
-        frameBorder="0"
-        scrolling="no"
-      ></iframe>
-    </div> */}
-    <div style={{ marginBottom: "-2rem" }} />
-    <EmailSubscriptionForm isWide={true} />
+    <iframe
+      src="https://passengerlounge.substack.com/embed"
+      title="newsletter-subscribe"
+      style={{ width: "98%" }}
+    />
   </>
 );
 

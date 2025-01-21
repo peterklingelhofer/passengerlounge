@@ -1,4 +1,4 @@
-// src/pages/blog.js
+// src/pages/news.js
 // NOTE: Make this loosely match node_modules/gatsby-theme-carbon/src/templates/Default.js
 
 import React from "react";

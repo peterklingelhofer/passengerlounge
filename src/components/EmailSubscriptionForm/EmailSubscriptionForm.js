@@ -1,3 +1,4 @@
+// src/components/EmailSubscriptionForm/EmailSubscriptionForm.js
 import React from "react";
 
 export const EmailSubscriptionForm = ({ isLeftSideBar = false }) => {
@@ -15,7 +16,7 @@ export const EmailSubscriptionForm = ({ isLeftSideBar = false }) => {
     <div style={isLeftSideBar ? { marginTop: "50%" } : {}}>
       <iframe
         src="https://passengerlounge.substack.com/embed"
-        title="newsletter-subscribe"
+        title="Newsletter subscription form"
         style={{ width: "98%" }}
       />
     </div>

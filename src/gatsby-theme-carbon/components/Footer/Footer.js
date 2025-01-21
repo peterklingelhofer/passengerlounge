@@ -3,7 +3,7 @@ import React from "react";
 import { footer, grid, nav, listItem, content } from "./Footer.module.scss";
 import { Row, Grid, Column } from "gatsby-theme-carbon/src/components/Grid";
 import { links as resourceLinks } from "../LeftNav/ResourceLinks";
-// import { EmailSubscriptionForm } from "../../../components/EmailSubscriptionForm/EmailSubscriptionForm";
+import { EmailSubscriptionForm } from "../../../components/EmailSubscriptionForm/EmailSubscriptionForm";
 import PropTypes from "prop-types";
 
 const Footer = ({ Content, links }) => {
@@ -76,16 +76,6 @@ Footer.propTypes = {
   Logo: PropTypes.elementType,
 };
 
-const Content = () => (
-  <>
-    <iframe
-      src="https://passengerlounge.substack.com/embed"
-      title="newsletter-subscribe"
-      style={{ width: "98%" }}
-    />
-  </>
-);
-
 const distributeLinks = (links) => {
   const midIndex = Math.ceil(links.length / 2);
   return {
@@ -100,6 +90,8 @@ const distributeLinks = (links) => {
 
 const links = distributeLinks(resourceLinks);
 
-const CustomFooter = () => <Footer links={links} Content={Content} />;
+const CustomFooter = () => (
+  <Footer links={links} Content={EmailSubscriptionForm} />
+);
 
 export default CustomFooter;

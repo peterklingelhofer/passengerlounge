@@ -1,5 +1,6 @@
 import React from "react";
 import ResourceLinks from "gatsby-theme-carbon/src/components/LeftNav/ResourceLinks";
+// import { EmailSubscriptionForm } from "../../../components/EmailSubscriptionForm/EmailSubscriptionForm.js";
 
 export const links = [
   {
@@ -51,22 +52,7 @@ export const links = [
 const CustomResources = () => (
   <>
     <ResourceLinks shouldOpenNewTabs links={links} />
-    {/* <div style={{ marginTop: "60%" }}>
-      <iframe
-        src="https://passengerlounge.substack.com/embed"
-        title="newsletter-subscribe"
-        style={{
-          background:
-            "linear-gradient(0deg, rgba(22,22,22,1) 0%, rgba(26,26,26,1) 95%, rgba(22,22,22,1) 100%)",
-          clipPath: "inset(0 0 17% 0)",
-          height: "100%",
-          width: "98%",
-        }}
-        frameBorder="0"
-        scrolling="no"
-      ></iframe>
-    </div> */}
-    {/* <EmailSubscriptionForm isWide={false} /> */}
+    {/* <EmailSubscriptionForm isLeftSideBar={true} /> */}
   </>
 );
 

@@ -8,6 +8,7 @@ import PageDescription from "gatsby-theme-carbon/src/components/PageDescription"
 import PageHeader from "gatsby-theme-carbon/src/components/PageHeader";
 import Main from "gatsby-theme-carbon/src/components/Main";
 import NextPrevious from "gatsby-theme-carbon/src/components/NextPrevious";
+import { Helmet } from "react-helmet";
 
 const BlogPage = ({ data, location, pageContext }) => {
   const posts = data.allFeedSubstackFeed.nodes;
@@ -28,6 +29,10 @@ const BlogPage = ({ data, location, pageContext }) => {
           const date = new Date(post.pubDate).toLocaleDateString();
           return (
             <article key={post.id}>
+              <Helmet>
+                <link rel="canonical" href={post.link} />
+              </Helmet>
+
               <h2>
                 <a href={post.link} target="_blank" rel="noopener noreferrer">
                   {post.title}

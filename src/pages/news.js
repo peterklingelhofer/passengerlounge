@@ -7,8 +7,9 @@ import Layout from "../gatsby-theme-carbon/components/Layout";
 import PageDescription from "gatsby-theme-carbon/src/components/PageDescription";
 import PageHeader from "gatsby-theme-carbon/src/components/PageHeader";
 import Main from "gatsby-theme-carbon/src/components/Main";
+import NextPrevious from "gatsby-theme-carbon/src/components/NextPrevious";
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data, location, pageContext }) => {
   const posts = data.allFeedSubstackFeed.nodes;
 
   return (
@@ -43,6 +44,8 @@ const BlogPage = ({ data }) => {
           );
         })}
       </Main>
+
+      <NextPrevious pageContext={pageContext} location={location} />
     </Layout>
   );
 };

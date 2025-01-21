@@ -1,12 +1,12 @@
 - title: Latest Release
   pages:
     - path: /discography/viscous
-- title: Upcoming Shows
-  pages:
-    - path: /upcoming-shows
 - title: News
   pages:
     - path: /news
+- title: Upcoming Shows
+  pages:
+    - path: /upcoming-shows
 # - title: Gallery
 #   pages:
 #     - path: /gallery

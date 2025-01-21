@@ -10,6 +10,7 @@ const BlogPage = ({ data }) => {
 
   return (
     <Layout
+      theme="dark"
       titleType="page"
       pageTitle="News"
       pageDescription="Check out our latest Substack posts."

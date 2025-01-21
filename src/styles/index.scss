@@ -2,7 +2,7 @@
 
 // Gatsby Default Breakpoints: 672px, 1056px
 
-// disable horizontal scroll
+// Disable horizontal scroll
 html,
 body {
   max-width: 100%;
@@ -20,17 +20,17 @@ html[data-theme='light'] {
   }
 }
 
-// hide page last updated date text
+// Hide page last updated date text
 .last-modified-date-module--text--1RmBx {
   display: none;
 }
-// change nav current selection color to match subscribe embed
+// Change nav current selection color to match subscribe embed
 a.bx--side-nav__link[aria-current='page']::before,
 a.bx--side-nav__link--current::before {
   background-color: #019b50 !important;
 }
 
-// hide edit link module
+// Hide edit link module
 .EditLink-module--row--2vJiZ {
   display: none !important;
 }
@@ -52,17 +52,23 @@ a.bx--side-nav__link--current::before {
   }
 }
 
-// hide top right app button switcher
+// Hide top right app button switcher
 button[aria-label="Switch sites"] {
   display: none !important;
 }
 
-// hide feedback smiley face modal button
+// Hide feedback smiley face modal button
 .LaunchButton-module--button--30iL7 {
   display: none !important;
 }
 
-// hide first nav highlighting on selection
+// Hide Substack image link expand icons
+.image-link-expand {
+  display: none !important;
+}
+
+
+// Hide first nav highlighting on selection
 // li.LeftNav-module--current-item--gs-Rt.bx--side-nav__items:first-child a {
 //   background-color: #161616 !important;
 // }

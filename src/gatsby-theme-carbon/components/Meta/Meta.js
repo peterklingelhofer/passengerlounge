@@ -42,6 +42,10 @@ const Meta = ({ pageTitle, pageDescription, pageKeywords, titleType }) => {
         name="facebook-domain-verification"
         content="e39zoadym49rqcj2sb65ij1yw6l94k"
       />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+      />
     </Helmet>
   );
 };

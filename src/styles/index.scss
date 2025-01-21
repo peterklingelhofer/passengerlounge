@@ -67,6 +67,11 @@ button[aria-label="Switch sites"] {
   display: none !important;
 }
 
+// Force images to resize responsively, maintaining aspect ratio
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
 
 // Hide first nav highlighting on selection
 // li.LeftNav-module--current-item--gs-Rt.bx--side-nav__items:first-child a {

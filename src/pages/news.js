@@ -26,14 +26,7 @@ const BlogPage = ({ data }) => {
         {posts.map((post) => {
           const date = new Date(post.pubDate).toLocaleDateString();
           return (
-            <article
-              key={post.id}
-              style={{
-                maxWidth: "700px",
-                margin: "0 auto",
-                marginBottom: "2em",
-              }}
-            >
+            <article key={post.id}>
               <h2>
                 <a href={post.link} target="_blank" rel="noopener noreferrer">
                   {post.title}

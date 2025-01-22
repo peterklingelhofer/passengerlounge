@@ -4,8 +4,8 @@ import HomepageTemplate from "gatsby-theme-carbon/src/templates/Homepage";
 import Utils from "./Utils";
 import { calloutLink } from "./Homepage.module.scss";
 import Stars from "./Stars";
-import Black from "./black.jpg";
-import viscousAlbum from "../images/viscous-album-cover.jpg";
+import Black from "../images/black.webp";
+import viscousAlbum from "../images/viscous-album-cover.webp";
 
 const EmptyText = () => <p></p>;
 

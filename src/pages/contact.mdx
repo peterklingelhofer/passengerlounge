@@ -4,19 +4,52 @@ description: Contact the band for booking, media, and/or press inquiries
 ---
 
 <PageDescription>
-
-Contact the band for booking, media, and/or press inquiries
-
+  Contact the band for booking, media, and/or press inquiries
 </PageDescription>
+
+<form
+  name="contact"
+  method="POST"
+  action="/thank-you"
+  data-netlify="true"
+  data-netlify-recaptcha="true"
+  netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="contact" />
+
+<p style={{ display: "none" }}>
+  <label>
+    Don’t fill this out if you're human: <input name="bot-field" />
+  </label>
+</p>
 
 ## Booking
 
-For booking inquires, you may reach us [here](mailto:lnkmiuhlh@relay.firefox.com)
+<p>
+  <label htmlFor="booking">Provide your booking inquiry:</label>
+  <br />
+  <textarea name="booking" id="booking" rows="3"></textarea>
+</p>
 
 ## Media and Press
 
-For media and press inquires, you may reach us [here](mailto:kdheudxje@relay.firefox.com)
+<p>
+  <label htmlFor="media">Media/Press inquiries:</label>
+  <br />
+  <textarea name="media" id="media" rows="3"></textarea>
+</p>
 
 ## Licensing and General Inquiries
 
-For all other inquiries including licensing, you may reach us [here](mailto:kdheudxje@relay.firefox.com)
+<p>
+  <label htmlFor="licensing">Licensing/General questions:</label>
+  <br />
+  <textarea name="licensing" id="licensing" rows="3"></textarea>
+</p>
+
+<div data-netlify-recaptcha="true"></div>
+
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>

@@ -3,6 +3,8 @@ title: Contact
 description: Contact the band for any booking, media/press, licensing, and/or general inquiries
 ---
 
+import { TextInput, TextArea, Button } from "carbon-components-react";
+
 <PageDescription>
   Contact the band for any booking, media/press, licensing, and/or general
   inquiries
@@ -23,44 +25,56 @@ description: Contact the band for any booking, media/press, licensing, and/or ge
   </label>
 </p>
 
-<p>
-  <label htmlFor="name">Name:</label>
-  <br />
-  <input type="text" name="name" id="name" />
-</p>
-<br />
-<p>
-  <label htmlFor="email">Email:</label>
-  <br />
-  <input type="email" name="email" id="email" />
-</p>
-<br />
-<p>
-  <label htmlFor="inquiry">Inquiry:</label>
-  <br />
-  <textarea name="inquiry" id="inquiry" rows="3"></textarea>
-</p>
+<TextInput
+  id="name"
+  name="name"
+  labelText="Name"
+  placeholder="Your name"
+  required
+  style={{ marginBottom: "1rem" }}
+/>
 
-<div data-netlify-recaptcha="true"></div>
+<TextInput
+  id="email"
+  name="email"
+  type="email"
+  labelText="Email"
+  placeholder="your@email.com"
+  required
+  style={{ marginBottom: "1rem" }}
+/>
 
-  <p>
-    <button
-      type="submit"
-      style={{
+<TextArea
+  id="inquiry"
+  name="inquiry"
+  labelText="Inquiry"
+  placeholder="Write your message here..."
+  rows={3}
+  required
+  style={{ marginBottom: "1rem" }}
+/>
+
+<div data-netlify-recaptcha="true" style={{ margin: "1rem 0" }} />
+
+  <Button
+    type="submit"
+    style={{
         display: "inline-block",
         backgroundColor: "#009149",
         border: "1px solid #009149",
-        borderRadius: "8px 8px 8px 8px",
+        borderRadius: "8px",
         color: "#fff",
         fontWeight: 600,
         fontSize: "14px",
+        fontFamily:
+        'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, ' +
+        'Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
         padding: "0 20px",
         height: "40px",
         marginTop: 0,
-        cursor: "pointer"
-      }}
+        cursor: "pointer",
+    }}
     >
       Send
-    </button>
-  </p>
+  </Button>
 </form>

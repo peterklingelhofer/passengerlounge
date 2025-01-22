@@ -1,10 +1,11 @@
 ---
 title: Contact
-description: Contact the band for booking, media, and/or press inquiries
+description: Contact the band for any booking, media/press, licensing, and/or general inquiries
 ---
 
 <PageDescription>
-  Contact the band for booking, media, and/or press inquiries
+  Contact the band for any booking, media/press, licensing, and/or general
+  inquiries
 </PageDescription>
 
 <form
@@ -22,33 +23,44 @@ description: Contact the band for booking, media, and/or press inquiries
   </label>
 </p>
 
-## Booking
-
 <p>
-  <label htmlFor="booking">Provide your booking inquiry:</label>
+  <label htmlFor="name">Name:</label>
   <br />
-  <textarea name="booking" id="booking" rows="3"></textarea>
+  <input type="text" name="name" id="name" />
 </p>
-
-## Media and Press
-
+<br />
 <p>
-  <label htmlFor="media">Media/Press inquiries:</label>
+  <label htmlFor="email">Email:</label>
   <br />
-  <textarea name="media" id="media" rows="3"></textarea>
+  <input type="email" name="email" id="email" />
 </p>
-
-## Licensing and General Inquiries
-
+<br />
 <p>
-  <label htmlFor="licensing">Licensing/General questions:</label>
+  <label htmlFor="inquiry">Inquiry:</label>
   <br />
-  <textarea name="licensing" id="licensing" rows="3"></textarea>
+  <textarea name="inquiry" id="inquiry" rows="3"></textarea>
 </p>
 
 <div data-netlify-recaptcha="true"></div>
 
   <p>
-    <button type="submit">Send</button>
+    <button
+      type="submit"
+      style={{
+        display: "inline-block",
+        backgroundColor: "#009149",
+        border: "1px solid #009149",
+        borderRadius: "8px 8px 8px 8px",
+        color: "#fff",
+        fontWeight: 600,
+        fontSize: "14px",
+        padding: "0 20px",
+        height: "40px",
+        marginTop: 0,
+        cursor: "pointer"
+      }}
+    >
+      Send
+    </button>
   </p>
 </form>
